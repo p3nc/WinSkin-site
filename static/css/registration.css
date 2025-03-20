@@ -5,13 +5,13 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url("/background.png");
+    background-image: url("/static/images/background.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.login-container {
+.register-container {
     background: linear-gradient(135deg, #b8860b, #8b4513);
     padding: 30px;
     border-radius: 12px;
@@ -51,4 +51,17 @@ button {
 
 button:hover {
     background-color: #b71c1c;
+}
+
+p {
+    color: #f5e1c3;
+}
+
+a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }

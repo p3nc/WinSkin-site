@@ -1,0 +1,26 @@
+.content {
+  padding-top: 50px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+.footer {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+}

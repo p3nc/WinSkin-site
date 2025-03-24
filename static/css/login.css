@@ -11,7 +11,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.login-container {
+.register-container {
     background: linear-gradient(135deg, #b8860b, #8b4513);
     padding: 30px;
     border-radius: 12px;
@@ -36,6 +36,7 @@ input {
     margin: 10px 0;
     border: none;
     border-radius: 6px;
+    background-color: #fff;
 }
 
 button {
@@ -51,4 +52,17 @@ button {
 
 button:hover {
     background-color: #b71c1c;
+}
+
+p {
+    color: #f5e1c3;
+}
+
+a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }

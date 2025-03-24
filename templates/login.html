@@ -1,18 +1,14 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Вхід | WinSkin</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/registration.css') }}">
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}Вхід | WinSkin{% endblock %}
+
+
+{% block content %}
 <div class="register-container">
   <div class="logo-container">
     <img src="{{ url_for('static', filename='images/winskin-logo.png') }}" alt="WinSkin Logo">
   </div>
   <h2>Вхід в WinSkin</h2>
-
 
   {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
@@ -29,5 +25,4 @@
   </form>
   <p>Не маєте акаунта? <a href="{{ url_for('registration') }}">Реєстрація</a></p>
 </div>
-</body>
-</html>
+{% endblock %}

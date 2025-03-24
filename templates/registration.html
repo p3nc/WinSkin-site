@@ -1,18 +1,14 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Реєстрація | WinSkin</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/registration.css') }}">
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}Реєстрація | WinSkin{% endblock %}
+
+
+{% block content %}
 <div class="register-container">
   <div class="logo-container">
-    <img src="{{ url_for('static', filename='../static/images/winskin-logo.png') }}" alt="WinSkin Logo">
+    <img src="{{ url_for('static', filename='images/winskin-logo.png') }}" alt="WinSkin Logo">
   </div>
   <h2>Реєстрація в WinSkin</h2>
-
 
   {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
@@ -22,14 +18,13 @@
     {% endif %}
   {% endwith %}
 
-  <form id="registerForm" action="/registration" method="post">
+  <form id="registrationForm" action="/registration" method="post">
     <input type="text" name="username" placeholder="Логін" required>
     <input type="email" name="email" placeholder="Email" required>
     <input type="password" name="password" placeholder="Пароль" required>
-    <input type="password" name="confirmPassword" placeholder="Підтвердьте пароль" required>
+    <input type="password" name="confirmPassword" placeholder="Підтвердіть пароль" required>
     <button type="submit">Зареєструватися</button>
   </form>
-  <p>Вже маєте акаунт? <a href="{{ url_for('login') }}">Увійти</a></p>
+  <p>Вже маєте акаунт? <a href="{{ url_for('login') }}">Вхід</a></p>
 </div>
-</body>
-</html>
+{% endblock %}

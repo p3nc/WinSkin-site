@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+
 
 app = Flask(
     __name__,
@@ -18,8 +20,9 @@ class User(db.Model):
     username = db.Column(db.String(50), nullable=False, unique=True)
     email = db.Column(db.String(100), nullable=False, unique=True)
     password = db.Column(db.String(100), nullable=False)
+    tugriks = db.Column(db.Integer, default=0)
 
-
+migrate = Migrate(app, db)
 
 @app.route('/mainpage')
 def mainpage():
@@ -84,6 +87,28 @@ def user():
             return render_template('user.html', user=user)
     flash('Будь ласка, увійдіть або зареєструйтесь', 'error')
     return redirect(url_for('login'))
+
+
+@app.route('/add_tugriks', methods=['POST'])
+def add_tugriks():
+    user_id = session.get('user_id')
+    if user_id:
+        user = User.query.get(user_id)
+        if user:
+            tugriks_amount = int(request.form.get('tugriksAmount'))
+            if 1 <= tugriks_amount <= 1000:
+                if user.tugriks is None:
+                    user.tugriks = 0
+                user.tugriks += tugriks_amount
+                db.session.commit()
+                flash('Тугрики успішно додані!', 'success')
+            else:
+                flash('Кількість тугриків повинна бути від 1 до 1000', 'error')
+        else:
+            flash('Користувач не знайдений', 'error')
+    else:
+        flash('Будь ласка, увійдіть або зареєструйтесь', 'error')
+    return redirect(url_for('user'))
 
 
 

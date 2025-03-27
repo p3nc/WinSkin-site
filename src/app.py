@@ -24,6 +24,13 @@ class User(db.Model):
 
 migrate = Migrate(app, db)
 
+
+@app.route('/roulette')
+def roulette():
+    user_id = session.get('user_id')
+    user = User.query.get(user_id) if user_id else None
+    return render_template('roulette.html', user=user)
+
 @app.route('/mainpage')
 def mainpage():
     user_id = session.get('user_id')

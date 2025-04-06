@@ -1,0 +1,49 @@
+.entrance {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("pentbackground.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.door {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    transition: transform 1s ease-in-out;
+    z-index: 2;
+}
+
+.left-door {
+    left: 0;
+}
+
+.right-door {
+    right: 0;
+}
+
+.entrance.open .left-door {
+    transform: translateX(-100%);
+}
+
+.entrance.open .right-door {
+    transform: translateX(100%);
+}
+
+#enter-btn {
+    z-index: 3;
+    position: relative;
+    font-size: 1.5rem;
+    padding: 1em 2em;
+    cursor: pointer;
+    background: #f5e1c3;
+    border: none;
+    border-radius: 10px;
+}

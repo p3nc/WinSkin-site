@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const enterBtn = document.getElementById('enter-btn');
     const entrance = document.querySelector('.entrance');
+    const addTugriksForm = document.getElementById('addTugriksForm');
+    const showAddTugriksBtn = document.getElementById('showAddTugriksForm');
+    const closeAddTugriksBtn = document.getElementById('closeAddTugriksForm');
 
     if (enterBtn && entrance) {
         enterBtn.addEventListener('click', function() {
@@ -9,6 +12,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
             enterBtn.style.opacity = '0';
             setTimeout(() => enterBtn.style.display = 'none', 300);
+        });
+    }
+
+    if (showAddTugriksBtn && addTugriksForm && closeAddTugriksBtn) {
+        showAddTugriksBtn.addEventListener('click', function() {
+            addTugriksForm.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeAddTugriksBtn.addEventListener('click', function() {
+            addTugriksForm.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        addTugriksForm.addEventListener('click', function(e) {
+            if (e.target === addTugriksForm) {
+                addTugriksForm.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
         });
     }
 });

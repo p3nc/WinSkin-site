@@ -1,23 +1,33 @@
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-    background-image: url("/static/images/background.png");
+    background-image: url('../images/Hallbackground.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+main.content {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
 }
 
 .register-container {
-    background: linear-gradient(135deg, #b8860b, #8b4513);
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7),
+                inset 0 0 10px rgba(224, 201, 166, 0.3);
     text-align: center;
     width: 320px;
+    border: 1px solid #e0c9a6;
+    position: relative;
+    z-index: 10;
+    margin: 0;
 }
 
 .logo-container img {
@@ -26,43 +36,63 @@ body {
 }
 
 h2 {
-    color: #f5e1c3;
+    color: #e0c9a6;
     margin-bottom: 20px;
+    font-size: 24px;
 }
 
 input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
-    border: none;
-    border-radius: 6px;
-    background-color: #fff;
+    border: 1px solid #e0c9a6;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #e0c9a6;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: rgba(224, 201, 166, 0.7);
 }
 
 button {
-    background-color: #d32f2f;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #e0c9a6;
+    padding: 12px;
+    border: 1px solid #e0c9a6;
+    border-radius: 25px;
     cursor: pointer;
     width: 100%;
     font-size: 16px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: #b71c1c;
+    background-color: rgba(224, 201, 166, 0.2);
 }
 
 p {
-    color: #f5e1c3;
+    color: #e0c9a6;
+    margin-top: 20px;
 }
 
 a {
-    color: #ffd700;
+    color: #e0c9a6;
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+.alert {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid #e0c9a6;
+    color: #e0c9a6;
 }

@@ -3,5 +3,22 @@
 {% block title %}Головна сторінка{% endblock %}
 
 {% block content %}
-<h1>Вітаємо на WinSkin</h1>
+<div class="container">
+  <div class="content-wrapper">
+    <div class="left-block">
+      <img src="{{ url_for('static', filename='images/leftgirl.png') }}" alt="Left image">
+      <button onclick="showHelp()">Довідка</button>
+      <div id="helpMessage" class="help-message"></div>
+    </div>
+    <div class="header">
+      <img src="{{ url_for('static', filename='images/Table.png') }}" alt="Header">
+    </div>
+    <div class="right-block">
+      <img src="{{ url_for('static', filename='images/rightguy.png') }}" alt="Right image">
+      <button onclick="placeOrder()">Зробити замовлення</button>
+      <div id="orderResult" class="order-result"></div>
+    </div>
+  </div>
+</div>
+<script src="{{ url_for('static', filename='js/mainpage.js') }}"></script>
 {% endblock %}

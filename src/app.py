@@ -1,14 +1,19 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+import os
 
+# Отримуємо абсолютний шлях до директорії проекту
+BASE_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
 app = Flask(
     __name__,
     template_folder='../templates',
     static_folder='../static'
 )
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+
+# Використовуємо абсолютний шлях для бази даних
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(BASE_DIR, "instance", "db.sqlite")}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'your_secret_key'
 
@@ -24,6 +29,9 @@ class User(db.Model):
 
 migrate = Migrate(app, db)
 
+@app.route('/')
+def index():
+    return redirect(url_for('mainpage'))
 
 @app.route('/roulette')
 def roulette():
@@ -95,7 +103,6 @@ def user():
     flash('Будь ласка, увійдіть або зареєструйтесь', 'error')
     return redirect(url_for('login'))
 
-
 @app.route('/add_tugriks', methods=['POST'])
 def add_tugriks():
     user_id = session.get('user_id')
@@ -116,9 +123,6 @@ def add_tugriks():
     else:
         flash('Будь ласка, увійдіть або зареєструйтесь', 'error')
     return redirect(url_for('user'))
-
-
-
 
 if __name__ == '__main__':
     with app.app_context():

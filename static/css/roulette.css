@@ -1,0 +1,207 @@
+/* Базовий стиль */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e2e2e; /* Тёмно-серый */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Основний контейнер */
+.main-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    position: relative;
+}
+
+/* Ліва колонка */
+.left-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 🔥 Центрує все по горизонталі */
+}
+
+/* Картинка кейсу */
+.case-image-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+.case-image-container img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* ⬅ Центрування картинки */
+}
+
+.case-image-container img:hover {
+    transform: scale(1.35);
+}
+
+
+
+/* Таблиця зі скінами */
+.skins-table-container {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#skins-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 16px; /* Більші відступи між скінами */
+}
+
+#skins-table td {
+    border: 3px solid #ccc;
+    padding: 16px;
+    text-align: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+#skins-table td:hover {
+    transform: scale(1.35);
+}
+
+#skins-table td img {
+    max-width: 140px;
+    max-height: 140px;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* Колесо */
+.wheel-section {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.top-half {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.top-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wheel-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.arrow-container {
+    padding: 0;
+    margin: 0;
+    transform: rotate(180deg);
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 30px solid red;
+}
+
+#spin-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #1f1f1f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+.wheel-label {
+    font-size: 14px;
+    fill: white;
+    text-anchor: middle;
+    alignment-baseline: middle;
+}
+
+/* Нижня половина */
+.bottom-half {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.bottom-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.case-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #1f1f1f;
+    border: none;
+    color: white; /* Щоб текст був читабельним */
+    border-radius: 6px;
+}
+
+.bottom-message {
+    text-align: center;
+}
+
+#result-message {
+    font-size: 18px;
+    color: green;
+    text-align: center;
+}

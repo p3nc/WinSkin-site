@@ -3,7 +3,7 @@ const ctx = canvas.getContext('2d');
 const spinButton = document.getElementById('spin-button');
 const resultMessage = document.getElementById('result-message');
 
-let currentCaseId = 'case1'; // Значення оновлюється при виборі кейсу
+let currentCaseId = 'case1';
 
 const segments = [
     { color: 'blue', text: '', probability: 50 },
@@ -29,7 +29,6 @@ function drawSegment(startAngle, endAngle, color, label) {
     const start = degToRad(startAngle);
     const end = degToRad(endAngle);
 
-    // Сектор
     ctx.beginPath();
     ctx.moveTo(cx, cy);
     ctx.arc(cx, cy, radius, start, end);
@@ -38,7 +37,6 @@ function drawSegment(startAngle, endAngle, color, label) {
     ctx.stroke();
     ctx.closePath();
 
-    // Текст
     const midAngle = (startAngle + endAngle) / 2;
     const textAngle = degToRad(midAngle);
     const textX = cx + Math.cos(textAngle) * 140;
@@ -105,7 +103,6 @@ function determineWinner(angle) {
 }
 
 
-// Data for skins
 const caseImages = {
     'case1': '/static/images/Case1_Revolution/Case1.png',
     'case2': '/static/images/Case2_Rebellion/case-image.png',

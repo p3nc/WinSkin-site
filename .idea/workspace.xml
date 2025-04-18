@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b81b16c8-a4c0-495c-bf5d-e841aaa4df37" name="Changes" comment="added design_1">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/roulette.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/roulette.html" afterDir="false" />
-    </list>
+    <list default="true" id="b81b16c8-a4c0-495c-bf5d-e841aaa4df37" name="Changes" comment="сделал страничку с рулеткой вместе с css, js, html" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -155,7 +150,7 @@
       <workItem from="1744184452434" duration="555000" />
       <workItem from="1744185024417" duration="22000" />
       <workItem from="1744185047420" duration="9545000" />
-      <workItem from="1744965843394" duration="3892000" />
+      <workItem from="1744965843394" duration="4303000" />
     </task>
     <task id="LOCAL-00001" summary="added database">
       <option name="closed" value="true" />
@@ -221,7 +216,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743957414981</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="сделал страничку с рулеткой вместе с css, js, html">
+      <option name="closed" value="true" />
+      <created>1744970133627</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1744970133627</updated>
+    </task>
+    <task id="LOCAL-00010" summary="сделал страничку с рулеткой вместе с css, js, html">
+      <option name="closed" value="true" />
+      <created>1744970171701</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1744970171701</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +247,8 @@
     <MESSAGE value="add .gitignore" />
     <MESSAGE value="added design" />
     <MESSAGE value="added design_1" />
-    <option name="LAST_COMMIT_MESSAGE" value="added design_1" />
+    <MESSAGE value="сделал страничку с рулеткой вместе с css, js, html" />
+    <option name="LAST_COMMIT_MESSAGE" value="сделал страничку с рулеткой вместе с css, js, html" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WinSkin_site$server.coverage" NAME="server Coverage Results" MODIFIED="1742473761563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />

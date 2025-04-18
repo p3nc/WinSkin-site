@@ -1,7 +1,7 @@
-/* Базовий стиль */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #2e2e2e; /* Тёмно-серый */
+    background-color: #2e2e2e;
     margin: 0;
     padding: 0;
     display: flex;
@@ -26,7 +26,6 @@ footer {
     margin-top: auto;
 }
 
-/* Основний контейнер */
 .main-container {
     display: flex;
     justify-content: flex-start;
@@ -35,14 +34,12 @@ footer {
     position: relative;
 }
 
-/* Ліва колонка */
 .left-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* 🔥 Центрує все по горизонталі */
+    align-items: center;
 }
 
-/* Картинка кейсу */
 .case-image-container {
     margin-bottom: 20px;
     text-align: center;
@@ -54,7 +51,7 @@ footer {
     max-width: 150px;
     height: auto;
     display: block;
-    margin: 0 auto; /* ⬅ Центрування картинки */
+    margin: 0 auto;
 }
 
 .case-image-container img:hover {
@@ -72,7 +69,7 @@ footer {
 #skins-table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 16px; /* Більші відступи між скінами */
+    border-spacing: 16px;
 }
 
 #skins-table td {
@@ -171,7 +168,6 @@ footer {
     alignment-baseline: middle;
 }
 
-/* Нижня половина */
 .bottom-half {
     display: flex;
     flex-direction: column;
@@ -192,7 +188,7 @@ footer {
     cursor: pointer;
     background-color: #1f1f1f;
     border: none;
-    color: white; /* Щоб текст був читабельним */
+    color: white;
     border-radius: 6px;
 }
 

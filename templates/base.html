@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/user.css') }}">
     {% elif 'mainpage' in request.path %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/mainpage.css') }}">
+    {% elif 'roulette' in request.path %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/roulette.css') }}">
     {% endif %}
     {% endblock %}
 </head>

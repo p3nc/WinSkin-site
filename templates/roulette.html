@@ -3,5 +3,47 @@
 {% block title %}Рулетка{% endblock %}
 
 {% block content %}
-<h1>Рулетка</h1>
+<div class="main-container">
+    <div class="left-container">
+        <div class="case-image-container">
+            <img id="case-image" src="" alt="Выбранный кейс">
+        </div>
+        <div class="skins-table-container">
+            <table id="skins-table">
+            </table>
+        </div>
+    </div>
+
+    <div class="wheel-section">
+        <div class="top-half">
+            <div class="top-left">
+                <div class="wheel-container">
+                    <canvas id="wheel" width="400" height="400"></canvas>
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="arrow-container">
+                    <div class="arrow"></div>
+                </div>
+                <button id="spin-button">Крутити</button>
+            </div>
+        </div>
+
+        <!-- Нижняя половина -->
+        <div class="bottom-half">
+            <div class="bottom-buttons">
+                <button class="case-button" onclick="showCaseSkins('case1')">КЕЙС 1</button>
+                <button class="case-button" onclick="showCaseSkins('case2')">КЕЙС 2</button>
+                <button class="case-button" onclick="showCaseSkins('case3')">КЕЙС 3</button>
+            </div>
+            <div class="bottom-message">
+                <div id="result-message"></div>
+                <div id="won-skin-image" style="margin-top: 20px; text-align: center;"></div>
+
+            </div>
+        </div>
+    </div>
+</div> <!-- Закриваючий div для main-container -->
+
+<script src="{{ url_for('static', filename='js/roulette.js') }}"></script>
 {% endblock %}

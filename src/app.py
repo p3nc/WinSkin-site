@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import os
 
-# Отримуємо абсолютний шлях до директорії проекту
+
 BASE_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
 app = Flask(
@@ -26,8 +26,42 @@ class User(db.Model):
     email = db.Column(db.String(100), nullable=False, unique=True)
     password = db.Column(db.String(100), nullable=False)
     tugriks = db.Column(db.Integer, default=0)
+    admin = db.Column(db.Boolean, nullable=False, default=False)
+
+# Модель скіна
+class Skin(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False, unique=True)
+    rarity = db.Column(db.String(50), nullable=False, unique=True)
+    collection = db.Column(db.String(50), nullable=False, unique=True)
+    photo = db.Column(db.String(100), nullable=False, unique=True)
 
 migrate = Migrate(app, db)
+
+
+@app.route('/admin/skins', methods=['GET', 'POST'])
+def add_skins():
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+    user = User.query.get(session['user_id'])
+    if not user or not user.admin:
+        flash('Доступ заборонено', 'error')
+        return redirect(url_for('mainpage'))
+
+    if request.method == 'POST':
+        name = request.form.get('name')
+        rarity = request.form.get('rarity')
+        collection = request.form.get('collection')
+        photo = request.form.get('photo')
+
+        new_skin = Skin(name=name, rarity=rarity, collection=collection, photo=photo)
+        db.session.add(new_skin)
+        db.session.commit()
+        flash('Skin успішно додана!', 'success')
+        return redirect(url_for('admin_skins'))
+
+    skins = Skin.query.all()
+    return render_template('admin_skins.html', skins=skins)
 
 @app.route('/')
 def index():

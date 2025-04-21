@@ -69,6 +69,8 @@ def index():
 
 @app.route('/roulette')
 def roulette():
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
     user_id = session.get('user_id')
     user = User.query.get(user_id) if user_id else None
     return render_template('roulette.html', user=user)

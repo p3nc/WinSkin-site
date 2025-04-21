@@ -39,8 +39,8 @@ class Skin(db.Model):
 migrate = Migrate(app, db)
 
 
-@app.route('/admin/skins', methods=['GET', 'POST'])
-def add_skins():
+@app.route('/admin_skins', methods=['GET', 'POST'])
+def admin_skins():
     if 'user_id' not in session:
         return redirect(url_for('login'))
     user = User.query.get(session['user_id'])

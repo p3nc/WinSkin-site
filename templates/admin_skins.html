@@ -2,9 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Skins Management</title>
 </head>
 <body>
+    <div class="container">
+        <div class="content">
+            <h1>Skins Management</h1>
 
+            <form method="POST" class="add-tugriks-form" style="display: block; position: relative;">
+                <div class="form-group">
+                    <label for="name">Skin Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="rarity">Rarity:</label>
+                    <input type="text" id="rarity" name="rarity" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="collection">Collection:</label>
+                    <input type="text" id="collection" name="collection" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo">Photo URL:</label>
+                    <input type="text" id="photo" name="photo" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Add Skin</button>
+            </form>
+
+            <div style="margin-top: 30px;">
+                <h2 style="color: #e0c9a6;">Existing Skins</h2>
+                <div style="max-height: 300px; overflow-y: auto;">
+                    {% for skin in skins %}
+                    <div style="background-color: rgba(0, 0, 0, 0.6); margin: 10px 0; padding: 10px; border-radius: 8px; border: 1px solid #e0c9a6;">
+                        <p style="color: #e0c9a6;">Name: {{ skin.name }}</p>
+                        <p style="color: #e0c9a6;">Rarity: {{ skin.rarity }}</p>
+                        <p style="color: #e0c9a6;">Collection: {{ skin.collection }}</p>
+                        <img src="{{ skin.photo }}" alt="{{ skin.name }}" style="width: 100px; height: auto; border-radius: 5px;">
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <a href="{{ url_for('mainpage') }}" class="btn-primary" style="margin-top: 20px;">Back to Main Page</a>
+        </div>
+    </div>
 </body>
 </html>

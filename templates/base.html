@@ -42,6 +42,11 @@
           <a class="navbar-brand" href="{{ url_for('user') }}">
             {{ user.username }}
           </a>
+          {% if user.admin %}
+            <a class="navbar-brand" href="{{ url_for('admin_skins') }}">
+              Адмінка
+            </a>
+          {% endif %}
         </div>
       {% else %}
         <a class="navbar-brand" href="{{ url_for('login') }}">

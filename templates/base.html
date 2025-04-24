@@ -25,35 +25,38 @@
 <body>
 <header>
   <nav class="navbar fixed-top navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="{{ url_for('mainpage') }}">
-        <img src="{{ url_for('static', filename='images/winskin-logo.png')}}" alt="" width="30" height="24" class="d-inline-block align-text-top">
-        WinSkin
+<div class="container-fluid">
+  <a class="navbar-brand" href="{{ url_for('mainpage') }}">
+    <img src="{{ url_for('static', filename='images/winskin-logo.png')}}" alt="" width="30" height="24" class="d-inline-block align-text-top">
+    WinSkin
+  </a>
+  <a class="navbar-brand me-auto" href="{{ url_for('roulette') }}">
+    Рулетка
+  </a>
+  {% if user %}
+    <a class="navbar-brand" href="{{ url_for('inventory') }}">
+      Інвентар
+    </a>
+    <div class="d-flex align-items-center">
+      <span class="navbar-text me-3">
+        <i class="fas fa-coins text-warning"></i>
+        {{ user.tugriks }} T
+      </span>
+      <a class="navbar-brand" href="{{ url_for('user') }}">
+        {{ user.username }}
       </a>
-      <a class="navbar-brand me-auto" href="{{ url_for('roulette') }}">
-        Рулетка
-      </a>
-      {% if user %}
-        <div class="d-flex align-items-center">
-          <span class="navbar-text me-3">
-            <i class="fas fa-coins text-warning"></i>
-            {{ user.tugriks }} T
-          </span>
-          <a class="navbar-brand" href="{{ url_for('user') }}">
-            {{ user.username }}
-          </a>
-          {% if user.admin %}
-            <a class="navbar-brand" href="{{ url_for('admin_skins') }}">
-              Адмінка
-            </a>
-          {% endif %}
-        </div>
-      {% else %}
-        <a class="navbar-brand" href="{{ url_for('login') }}">
-          Вхід
+      {% if user.admin %}
+        <a class="navbar-brand" href="{{ url_for('admin_skins') }}">
+          Адмінка
         </a>
       {% endif %}
     </div>
+  {% else %}
+    <a class="navbar-brand" href="{{ url_for('login') }}">
+      Вхід
+    </a>
+  {% endif %}
+</div>
   </nav>
 </header>
   <main class="content main">

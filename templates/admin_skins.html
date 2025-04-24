@@ -1,55 +1,143 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - Skins Management</title>
-</head>
-<body>
-    <div class="container">
-        <div class="content">
-            <h1>Skins Management</h1>
+<div class="admin-container">
+    <a href="/" class="back-button">← Back to Main</a>
 
-            <form method="POST" class="add-tugriks-form" style="display: block; position: relative;">
-                <div class="form-group">
-                    <label for="name">Skin Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="rarity">Rarity:</label>
-                    <input type="text" id="rarity" name="rarity" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="collection">Collection:</label>
-                    <input type="text" id="collection" name="collection" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="photo">Photo URL:</label>
-                    <input type="text" id="photo" name="photo" required>
-                </div>
-
-                <button type="submit" class="submit-btn">Add Skin</button>
-            </form>
-
-            <div style="margin-top: 30px;">
-                <h2 style="color: #e0c9a6;">Existing Skins</h2>
-                <div style="max-height: 300px; overflow-y: auto;">
-                    {% for skin in skins %}
-                    <div style="background-color: rgba(0, 0, 0, 0.6); margin: 10px 0; padding: 10px; border-radius: 8px; border: 1px solid #e0c9a6;">
-                        <p style="color: #e0c9a6;">Name: {{ skin.name }}</p>
-                        <p style="color: #e0c9a6;">Rarity: {{ skin.rarity }}</p>
-                        <p style="color: #e0c9a6;">Collection: {{ skin.collection }}</p>
-                        <img src="{{ skin.photo }}" alt="{{ skin.name }}" style="width: 100px; height: auto; border-radius: 5px;">
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-
-            <a href="{{ url_for('mainpage') }}" class="btn-primary" style="margin-top: 20px;">Back to Main Page</a>
+    <h2>Add New Skin</h2>
+    <form method="POST" class="add-skin-form">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
         </div>
+
+        <div class="form-group">
+            <label for="rarity">Rarity:</label>
+            <select name="rarity" required>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="purple">Purple</option>
+                <option value="pink">Pink</option>
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="collection">Collection:</label>
+            <select name="collection" required>
+                <option value="Revolution">Revolution</option>
+                <option value="Rebellion">Rebellion</option>
+                <option value="Retaliation">Retaliation</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="photo">Image URL:</label>
+            <input type="text" name="photo" required>
+        </div>
+
+        <button type="submit">Add Skin</button>
+    </form>
+
+    <h2>Existing Skins</h2>
+    <div class="skins-list">
+        {% for skin in skins %}
+        <div class="skin-item" style="background-color: {{ skin.rarity }}">
+            <img src="{{ skin.photo }}" alt="{{ skin.name }}">
+            <div class="skin-details">
+                <span class="skin-name">{{ skin.name }}</span>
+                <span class="skin-collection">{{ skin.collection }}</span>
+            </div>
+            <form method="POST" action="{{ url_for('delete_skin', skin_id=skin.id) }}" class="delete-form">
+                <button type="submit" class="delete-button">Delete</button>
+            </form>
+        </div>
+        {% endfor %}
     </div>
-</body>
-</html>
+</div>
+
+<style>
+    .admin-container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .back-button {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #333;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .skins-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .skin-item {
+        padding: 10px;
+        border-radius: 8px;
+        position: relative;
+    }
+
+    .skin-item img {
+        width: 100%;
+        height: 150px;
+        object-fit: contain;
+        border-radius: 4px;
+    }
+
+    .skin-details {
+        margin-top: 10px;
+        color: white;
+    }
+
+    .skin-name {
+        display: block;
+        font-weight: bold;
+    }
+
+    .skin-collection {
+        font-size: 0.9em;
+        opacity: 0.8;
+    }
+
+    .delete-button {
+        background-color: #ff4444;
+        padding: 5px 10px;
+        margin-top: 10px;
+    }
+
+    .delete-button:hover {
+        background-color: #cc0000;
+    }
+</style>

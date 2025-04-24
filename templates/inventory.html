@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="inventory-container">
+    <div class="inventory-header">
+        <h2>Your Inventory</h2>
+        <div class="inventory-filters">
+            <select id="rarity-filter">
+                <option value="all">All Rarities</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="purple">Purple</option>
+                <option value="pink">Pink</option>
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+            </select>
+            <select id="sort-order">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="rarity">By Rarity</option>
+                <option value="name">By Name</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="inventory-stats">
+        <div class="stat-box">
+            <span class="stat-label">Total Items:</span>
+            <span class="stat-value">{{ inventory|length }}</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Most Common Rarity:</span>
+            <span class="stat-value" id="common-rarity">-</span>
+        </div>
+    </div>
+
+    <div class="inventory-grid">
+        {% for skin in inventory %}
+        <div class="inventory-item" data-rarity="{{ skin.rarity }}" data-date="{{ skin.date_obtained }}">
+            <div class="skin-image">
+                <img src="{{ skin.image }}" alt="{{ skin.skin_name }}">
+            </div>
+            <div class="skin-info">
+                <h3>{{ skin.skin_name }}</h3>
+                <p class="rarity">{{ skin.rarity }}</p>
+                <p class="date-obtained">{{ skin.date_obtained.strftime('%Y-%m-%d %H:%M') }}</p>
+            </div>
+        </div>
+        {% else %}
+        <div class="empty-inventory">
+            <p>Your inventory is empty</p>
+            <a href="{{ url_for('roulette') }}" class="cta-button">Try Your Luck!</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+document.getElementById('rarity-filter').addEventListener('change', function() {
+    const rarity = this.value;
+    const items = document.querySelectorAll('.inventory-item');
+    
+    items.forEach(item => {
+        if (rarity === 'all' || item.dataset.rarity.toLowerCase() === rarity) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+});
+
+document.getElementById('sort-order').addEventListener('change', function() {
+    const sortBy = this.value;
+    const grid = document.querySelector('.inventory-grid');
+    const items = Array.from(document.querySelectorAll('.inventory-item'));
+    
+    items.sort((a, b) => {
+        switch(sortBy) {
+            case 'newest':
+                return new Date(b.dataset.date) - new Date(a.dataset.date);
+            case 'oldest':
+                return new Date(a.dataset.date) - new Date(b.dataset.date);
+            case 'rarity':
+                return b.dataset.rarity.localeCompare(a.dataset.rarity);
+            case 'name':
+                return a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent);
+        }
+    });
+    
+    items.forEach(item => grid.appendChild(item));
+});
+
+window.addEventListener('load', function() {
+    const items = document.querySelectorAll('.inventory-item');
+    const rarityCount = {};
+    
+    items.forEach(item => {
+        const rarity = item.dataset.rarity;
+        rarityCount[rarity] = (rarityCount[rarity] || 0) + 1;
+    });
+    
+    const mostCommon = Object.entries(rarityCount)
+        .sort((a, b) => b[1] - a[1])[0];
+    
+    if (mostCommon) {
+        document.getElementById('common-rarity').textContent = mostCommon[0];
+    }
+});
+</script>
+{% endblock %}

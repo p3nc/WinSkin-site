@@ -2,8 +2,8 @@ const canvas = document.getElementById('wheel');
 const ctx = canvas.getContext('2d');
 const spinButton = document.getElementById('spin-button');
 const resultMessage = document.getElementById('result-message');
-
 let currentCaseId = 'case1';
+const SPIN_COST = 100;
 
 const segments = [
     { color: 'blue', text: '', probability: 50 },
@@ -52,36 +52,113 @@ function drawSegment(startAngle, endAngle, color, label) {
     ctx.restore();
 }
 
-
 function degToRad(deg) {
     return deg * (Math.PI / 180);
 }
-spinButton.addEventListener('click', () => {
-    const totalTime = 5000;
-    let startTime = performance.now();
-    let currentAngle = Math.random() * 360;
-    let speed = 7.2;
 
-    function animate(currentTime) {
-        const elapsedTime = currentTime - startTime;
-        const progress = Math.min(elapsedTime / totalTime, 1);
-        speed = 7.2 * (1 - progress);
-        currentAngle += (speed / 1000) * (currentTime - startTime);
-        currentAngle %= 360;
-        canvas.style.transform = `rotate(${currentAngle}deg)`;
+const caseImages = {
+    'case1': '/static/images/Case1_Revolution/Case1.png',
+    'case2': '/static/images/Case2_Rebellion/case-image.png',
+    'case3': '/static/images/Case3_Retaliation/case-image.png'
+};
+
+const caseCollections = {
+    'case1': 'Revolution',
+    'case2': 'Rebellion',
+    'case3': 'Retaliation'
+};
+
+async function loadSkinsForCase(caseId) {
+    try {
+        const collection = caseCollections[caseId];
+        const response = await fetch(`/get_case_skins/${collection}`);
+        const data = await response.json();
+        return data.skins;
+    } catch (error) {
+        console.error('Error loading skins:', error);
+        return [];
+    }
+}
+
+function animateNumber(element, start, end, duration) {
+    const startTime = performance.now();
+    const difference = end - start;
+
+    function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        const currentValue = Math.floor(start + difference * progress);
+        element.textContent = currentValue;
 
         if (progress < 1) {
-            requestAnimationFrame(animate);
-        } else {
-            determineWinner(currentAngle);
+            requestAnimationFrame(update);
         }
     }
 
-    requestAnimationFrame(animate);
+    requestAnimationFrame(update);
+}
+
+spinButton.addEventListener('click', async () => {
+        try {
+        const response = await fetch('/spin_roulette', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            alert(data.error || 'Помилка при крутінні рулетки');
+            return;
+        }
+
+        const balanceElement = document.querySelector('.balance-amount');
+        if (balanceElement) {
+            const currentBalance = parseInt(balanceElement.textContent.replace(/\D/g, ''));
+            const newBalance = currentBalance - SPIN_COST;
+
+            balanceElement.style.transition = 'color 0.3s ease';
+            balanceElement.style.color = '#ff4444';
+
+            animateNumber(balanceElement, currentBalance, newBalance, 500);
+
+            setTimeout(() => {
+                balanceElement.style.color = '';
+            }, 300);
+        }
+
+        const totalTime = 5000;
+        let startTime = performance.now();
+        let currentAngle = Math.random() * 360;
+        let speed = 7.2;
+
+        function animate(currentTime) {
+            const elapsedTime = currentTime - startTime;
+            const progress = Math.min(elapsedTime / totalTime, 1);
+            speed = 7.2 * (1 - progress);
+            currentAngle += (speed / 1000) * (currentTime - startTime);
+            currentAngle %= 360;
+            canvas.style.transform = `rotate(${currentAngle}deg)`;
+
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            } else {
+                determineWinner(currentAngle);
+            }
+        }
+
+        requestAnimationFrame(animate);
+
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Помилка при крутінні рулетки');
+    }
 });
 
-
-function determineWinner(angle) {
+async function determineWinner(angle) {
     angle = 360 - angle;
     let winningSegment = null;
 
@@ -92,88 +169,46 @@ function determineWinner(angle) {
         }
     }
 
-    const allSkins = skinsData[currentCaseId];
-    const matchingSkins = allSkins.filter(skin => skin.rarity === winningSegment.color);
+    const skins = await loadSkinsForCase(currentCaseId);
+    const matchingSkins = skins.filter(skin =>
+        skin.rarity.toLowerCase() === winningSegment.color.toLowerCase()
+    );
     const randomSkin = matchingSkins[Math.floor(Math.random() * matchingSkins.length)];
 
-    resultMessage.textContent = `Вітаю! Ви отримали скин "${randomSkin.name}"`;
+    resultMessage.textContent = `Вітаю! Ви отримали скін "${randomSkin.name}"`;
 
     const skinImageDiv = document.getElementById('won-skin-image');
-    skinImageDiv.innerHTML = `<img src="${randomSkin.image}" alt="${randomSkin.name}" style="max-width: 200px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin-top: 10px;">`;
+    skinImageDiv.innerHTML = `
+        <img src="${randomSkin.photo}"
+             alt="${randomSkin.name}"
+             style="max-width: 200px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin-top: 10px;">
+    `;
+
+    try {
+        await fetch('/save_won_skin', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: randomSkin.name,
+                rarity: randomSkin.rarity,
+                image: randomSkin.photo
+            })
+        });
+    } catch (error) {
+        console.error('Error saving won skin:', error);
+    }
 }
 
-
-const caseImages = {
-    'case1': '/static/images/Case1_Revolution/Case1.png',
-    'case2': '/static/images/Case2_Rebellion/case-image.png',
-    'case3': '/static/images/Case3_Retaliation/case-image.png'
-};
-
-
-const skinsData = {
-    'case1': [
-        { rarity: 'blue', image: '/static/images/Case1_Revolution/SkinBlue1.png', name: 'Cyberforce' },
-        { rarity: 'blue', image: '/static/images/Case1_Revolution/SkinBlue2.png', name: 'Fragments' },
-        { rarity: 'blue', image: '/static/images/Case1_Revolution/SkinBlue3.png', name: 'Insomnia' },
-        { rarity: 'blue', image: '/static/images/Case1_Revolution/SkinBlue4.png', name: 'Re.built' },
-        { rarity: 'blue', image: '/static/images/Case1_Revolution/SkinBlue5.png', name: 'Rebel' },
-        { rarity: 'green', image: '/static/images/Case1_Revolution/SkinGreen6.png', name: 'Featherweight' },
-        { rarity: 'green', image: '/static/images/Case1_Revolution/SkinGreen7.png', name: 'Liquidation' },
-        { rarity: 'green', image: '/static/images/Case1_Revolution/SkinGreen8.png', name: 'Sakkaku' },
-        { rarity: 'purple', image: '/static/images/Case1_Revolution/SkinPurple9.png', name: 'Neoqueen' },
-        { rarity: 'purple', image: '/static/images/Case1_Revolution/SkinPurple10.png', name: 'Umbral Rabbit' },
-        { rarity: 'pink', image: '/static/images/Case1_Revolution/SkinPink11.png', name: 'Banana Cannon' },
-        { rarity: 'pink', image: '/static/images/Case1_Revolution/SkinPink12.png', name: 'Emphorosaur-S' },
-        { rarity: 'red', image: '/static/images/Case1_Revolution/SkinRed13.png', name: 'Duality' },
-        { rarity: 'red', image: '/static/images/Case1_Revolution/SkinRed14.png', name: 'Head Shot' },
-        { rarity: 'yellow', image: '/static/images/Case1_Revolution/SkinYellow15.png', name: 'Sport Gloves' }
-    ],
-    'case2': [
-        { rarity: 'blue', image: 'path/to/case2/skin1.jpg' },
-        { rarity: 'blue', image: 'path/to/case2/skin2.jpg' },
-        { rarity: 'blue', image: 'path/to/case2/skin3.jpg' },
-        { rarity: 'blue', image: 'path/to/case2/skin4.jpg' },
-        { rarity: 'blue', image: 'path/to/case2/skin5.jpg' },
-        { rarity: 'green', image: 'path/to/case2/skin6.jpg' },
-        { rarity: 'green', image: 'path/to/case2/skin7.jpg' },
-        { rarity: 'green', image: 'path/to/case2/skin8.jpg' },
-        { rarity: 'purple', image: 'path/to/case2/skin9.jpg' },
-        { rarity: 'purple', image: 'path/to/case2/skin10.jpg' },
-        { rarity: 'pink', image: 'path/to/case2/skin11.jpg' },
-        { rarity: 'pink', image: 'path/to/case2/skin12.jpg' },
-        { rarity: 'red', image: 'path/to/case2/skin13.jpg' },
-        { rarity: 'red', image: 'path/to/case2/skin14.jpg' },
-        { rarity: 'yellow', image: 'path/to/case2/skin15.jpg' }
-    ],
-    'case3': [
-        { rarity: 'blue', image: 'path/to/case3/skin1.jpg' },
-        { rarity: 'blue', image: 'path/to/case3/skin2.jpg' },
-        { rarity: 'blue', image: 'path/to/case3/skin3.jpg' },
-        { rarity: 'blue', image: 'path/to/case3/skin4.jpg' },
-        { rarity: 'blue', image: 'path/to/case3/skin5.jpg' },
-        { rarity: 'green', image: 'path/to/case3/skin6.jpg' },
-        { rarity: 'green', image: 'path/to/case3/skin7.jpg' },
-        { rarity: 'green', image: 'path/to/case3/skin8.jpg' },
-        { rarity: 'purple', image: 'path/to/case3/skin9.jpg' },
-        { rarity: 'purple', image: 'path/to/case3/skin10.jpg' },
-        { rarity: 'pink', image: 'path/to/case3/skin11.jpg' },
-        { rarity: 'pink', image: 'path/to/case3/skin12.jpg' },
-        { rarity: 'red', image: 'path/to/case3/skin13.jpg' },
-        { rarity: 'red', image: 'path/to/case3/skin14.jpg' },
-        { rarity: 'yellow', image: 'path/to/case3/skin15.jpg' }
-    ]
-};
-
-
-function showCaseSkins(caseId) {
+async function showCaseSkins(caseId) {
     currentCaseId = caseId;
-
     document.getElementById('case-image').src = caseImages[caseId];
 
     const skinsTable = document.getElementById('skins-table');
     skinsTable.innerHTML = '';
 
-    const skins = skinsData[caseId];
+    const skins = await loadSkinsForCase(caseId);
     const columns = 3;
     const rows = 5;
 
@@ -186,13 +221,18 @@ function showCaseSkins(caseId) {
 
             if (skin) {
                 cell.style.backgroundColor = skin.rarity;
-                cell.innerHTML = `<img src="${skin.image}" alt="${skin.rarity} skin">`;
-            } else {
-                cell.innerHTML = '';
+                cell.innerHTML = `
+                    <div style="padding: 10px;">
+                        <img src="${skin.photo}" alt="${skin.name}">
+                        <div class="skin-name">${skin.name}</div>
+                    </div>
+                `;
             }
         }
     }
 }
 
-
-
+document.addEventListener('DOMContentLoaded', () => {
+    showCaseSkins('case1');
+    spinButton.textContent = `Spin (${SPIN_COST} ₮)`;
+});

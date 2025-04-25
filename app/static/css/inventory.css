@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('../images/Armory.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: #f5e1c3;
+}
+
+.inventory-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid #e0c9a6;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.inventory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.inventory-header h2 {
+  font-size: 28px;
+  margin: 0 0 10px;
+  color: #fff;
+}
+
+.inventory-filters select {
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 8px;
+  border: 1px solid #e0c9a6;
+  background-color: #1a1a1a;
+  color: #f5e1c3;
+}
+
+.inventory-stats {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background-color: rgba(224, 201, 166, 0.1);
+  padding: 15px 25px;
+  border-radius: 10px;
+  border: 1px solid #e0c9a6;
+  box-shadow: inset 0 0 10px rgba(224, 201, 166, 0.2);
+}
+
+.stat-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.inventory-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #e0c9a6;
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(224, 201, 166, 0.2);
+}
+
+.inventory-item:hover {
+  transform: translateY(-5px);
+}
+
+.skin-image img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.skin-info {
+  text-align: center;
+}
+
+.skin-info h3 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.skin-info .rarity {
+  color: #f5e1c3;
+  font-size: 14px;
+  margin: 3px 0;
+}
+
+.skin-info .date-obtained {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.empty-inventory {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #a30000;
+}

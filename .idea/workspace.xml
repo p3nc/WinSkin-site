@@ -5,64 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b81b16c8-a4c0-495c-bf5d-e841aaa4df37" name="Changes" comment="added inventory">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/user.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/user.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/admin_skins.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin_skins.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/inventory.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/inventory.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instance/db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/instance/db.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/mainpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/mainpage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/registration.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/registration.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/roulette.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/roulette.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/user.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/user.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/JetBrainsMono-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/fonts/JetBrainsMono-Regular.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/JetBrainsSans-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/fonts/JetBrainsSans-Regular.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/Case1.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/Case1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinBlue1.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinBlue1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinBlue2.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinBlue2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinBlue3.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinBlue3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinBlue4.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinBlue4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinBlue5.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinBlue5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinGreen6.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinGreen6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinGreen7.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinGreen7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinGreen8.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinGreen8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinPink11.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinPink11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinPink12.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinPink12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinPurple10.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinPurple10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinPurple9.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinPurple9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinRed13.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinRed13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinRed14.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinRed14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinYellow15.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinYellow15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Hallbackground.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Hallbackground.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Las-vegas.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Las-vegas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Night-city.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Night-city.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Singapoure.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Singapoure.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Table.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Table.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Tower.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Tower.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/background.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/background.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/background.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/javascript.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/javascript.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/leftdoor.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/leftdoor.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/leftgirl.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/leftgirl.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/pentbackground.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/pentbackground.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/rightdoor.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/rightdoor.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/rightguy.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/rightguy.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/technologies.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/technologies.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/webstorm-icon-logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/webstorm-icon-logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/webstorm-logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/webstorm-logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/winskin-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/winskin-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/mainpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/js/mainpage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/roulette.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/js/roulette.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/js/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/403.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin_skins.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin_skins.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/inventory.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/inventory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/mainpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/roulette.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/roulette.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,10 +20,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -102,7 +50,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/p3nc/WinSkin-site.git&quot;,
-    &quot;accountId&quot;: &quot;1d05c0e9-05be-43c7-bd43-50d6128618c5&quot;
+    &quot;accountId&quot;: &quot;c1c85c1c-cbe4-4736-9027-c2b2a3361ba4&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -150,8 +98,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.26053.29" />
-        <option value="bundled-python-sdk-b1dbf8ef85a6-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.26053.29" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-PY-243.23654.177" />
+        <option value="bundled-python-sdk-91d3a02ef49d-43b77aa2d136-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.23654.177" />
       </set>
     </attachedChunks>
   </component>
@@ -179,6 +127,8 @@
       <workItem from="1745217302944" duration="2797000" />
       <workItem from="1745485834359" duration="8462000" />
       <workItem from="1745568340998" duration="837000" />
+      <workItem from="1745570671526" duration="1047000" />
+      <workItem from="1745571738173" duration="1611000" />
     </task>
     <task id="LOCAL-00001" summary="added database">
       <option name="closed" value="true" />
@@ -315,9 +265,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="added inventory" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/WinSkin_site$server.coverage" NAME="server Coverage Results" MODIFIED="1742473761563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/app_py$run.coverage" NAME="run Coverage Results" MODIFIED="1745572388624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/WinSkin_site$app.coverage" NAME="app Coverage Results" MODIFIED="1745215823649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/app_py$run.coverage" NAME="run Coverage Results" MODIFIED="1745568459550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/app_py$app.coverage" NAME="app Coverage Results" MODIFIED="1745493491724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/WinSkin_site$server.coverage" NAME="server Coverage Results" MODIFIED="1742473761563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>

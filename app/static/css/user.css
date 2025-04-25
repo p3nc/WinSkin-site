@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("app/static/images/pentbackground.png");
+    background-image: url("../images/pentbackground.png");
     background-size: cover;
     background-position: center;
 }

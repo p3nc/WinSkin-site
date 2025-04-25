@@ -17,7 +17,7 @@
   <button type="button" class="btn btn-primary" id="showAddTugriksForm">
     Додати Тугрики
   </button>
-  <a href="{{ url_for('logout') }}">Вийти</a>
+  <a href="{{ url_for('auth.logout') }}">Вийти</a>
 </div>
 
 <div class="add-tugriks-form" id="addTugriksForm" style="display: none;">
@@ -26,7 +26,7 @@
       <h5>Додати Тугрики</h5>
       <button type="button" class="close-btn" id="closeAddTugriksForm">&times;</button>
     </div>
-    <form method="POST" action="{{ url_for('add_tugriks') }}">
+    <form method="POST" action="{{ url_for('user.add_tugriks') }}">
       <div class="form-group">
         <label for="tugriksAmount">Кількість Тугриків (максимум 1000)</label>
         <input type="number" id="tugriksAmount" name="tugriksAmount" min="1" max="1000" required>

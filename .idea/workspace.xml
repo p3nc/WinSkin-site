@@ -4,7 +4,66 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b81b16c8-a4c0-495c-bf5d-e841aaa4df37" name="Changes" comment="сделал страничку с рулеткой вместе с css, js, html" />
+    <list default="true" id="b81b16c8-a4c0-495c-bf5d-e841aaa4df37" name="Changes" comment="added inventory">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/instance/db.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/mainpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/mainpage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/registration.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/registration.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/roulette.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/roulette.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/user.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/user.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/JetBrainsMono-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/fonts/JetBrainsMono-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/JetBrainsSans-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/fonts/JetBrainsSans-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/Case1.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/Case1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinBlue1.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinBlue1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinBlue2.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinBlue2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinBlue3.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinBlue3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinBlue4.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinBlue4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinBlue5.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinBlue5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinGreen6.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinGreen6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinGreen7.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinGreen7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinGreen8.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinGreen8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinPink11.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinPink11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinPink12.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinPink12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinPurple10.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinPurple10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinPurple9.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinPurple9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinRed13.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinRed13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinRed14.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinRed14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Case1_Revolution/SkinYellow15.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Case1_Revolution/SkinYellow15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Hallbackground.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Hallbackground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Las-vegas.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Las-vegas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Night-city.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Night-city.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Singapoure.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Singapoure.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Table.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Table.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/Tower.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/Tower.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/background.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/background.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/background.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/javascript.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/javascript.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/leftdoor.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/leftdoor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/leftgirl.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/leftgirl.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/pentbackground.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/pentbackground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/rightdoor.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/rightdoor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/rightguy.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/rightguy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/technologies.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/technologies.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/webstorm-icon-logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/webstorm-icon-logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/webstorm-logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/webstorm-logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/winskin-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/images/winskin-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/mainpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/js/mainpage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/roulette.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/js/roulette.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/js/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/403.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin_skins.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin_skins.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/inventory.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/inventory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/mainpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/roulette.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/roulette.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +72,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -42,7 +102,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/p3nc/WinSkin-site.git&quot;,
-    &quot;accountId&quot;: &quot;63b398cd-d2ad-438e-bc58-6d22d01dfd7c&quot;
+    &quot;accountId&quot;: &quot;1d05c0e9-05be-43c7-bd43-50d6128618c5&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -53,75 +113,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "JavaScript Debug.base.html.executor": "Run",
-    "JavaScript Debug.login.html.executor": "Run",
-    "JavaScript Debug.registration.html.executor": "Run",
-    "JavaScript Debug.roulette.html (1).executor": "Run",
-    "JavaScript Debug.roulette.html.executor": "Run",
-    "JavaScript Debug.user.html.executor": "Run",
-    "Python.app.executor": "Run",
-    "Python.server.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/111Nordom/Karazina/WinSkin",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.base.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.login.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.registration.html.executor&quot;: &quot;Run&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run.executor&quot;: &quot;Run&quot;,
+    &quot;Python.server.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\111Nordom\Karazina\WinSkin" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zlivk\PycharmProjects\WinSkin-site\app" />
       <recent name="C:\Users\zlivk\PycharmProjects\WinSkin-site\static\images" />
       <recent name="C:\Users\zlivk\PycharmProjects\WinSkin-site\static\js" />
       <recent name="C:\Users\zlivk\PycharmProjects\WinSkin-site\static" />
       <recent name="C:\Users\zlivk\PycharmProjects\WinSkin-site\templates" />
-      <recent name="C:\Users\zlivk\PycharmProjects\WinSkin-site\images" />
     </key>
-  </component>
-  <component name="RunManager" selected="JavaScript Debug.roulette.html (1)">
-    <configuration name="base.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WinSkin/templates/base.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WinSkin/templates/login.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="roulette.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/app.py/templates/roulette.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="roulette.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WinSkin/templates/roulette.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="user.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WinSkin/templates/user.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.roulette.html (1)" />
-        <item itemvalue="JavaScript Debug.roulette.html" />
-        <item itemvalue="JavaScript Debug.user.html" />
-        <item itemvalue="JavaScript Debug.base.html" />
-        <item itemvalue="JavaScript Debug.login.html" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.26053.29" />
+        <option value="bundled-python-sdk-b1dbf8ef85a6-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.26053.29" />
       </set>
     </attachedChunks>
   </component>
@@ -146,11 +176,9 @@
       <workItem from="1743935310045" duration="2756000" />
       <workItem from="1743951544205" duration="2939000" />
       <workItem from="1743958026081" duration="48000" />
-      <workItem from="1744184204523" duration="136000" />
-      <workItem from="1744184452434" duration="555000" />
-      <workItem from="1744185024417" duration="22000" />
-      <workItem from="1744185047420" duration="9545000" />
-      <workItem from="1744965843394" duration="4303000" />
+      <workItem from="1745217302944" duration="2797000" />
+      <workItem from="1745485834359" duration="8462000" />
+      <workItem from="1745568340998" duration="837000" />
     </task>
     <task id="LOCAL-00001" summary="added database">
       <option name="closed" value="true" />
@@ -216,23 +244,55 @@
       <option name="project" value="LOCAL" />
       <updated>1743957414981</updated>
     </task>
-    <task id="LOCAL-00009" summary="сделал страничку с рулеткой вместе с css, js, html">
+    <task id="LOCAL-00009" summary="added skins database">
       <option name="closed" value="true" />
-      <created>1744970133627</created>
+      <created>1745215526347</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1744970133627</updated>
+      <updated>1745215526347</updated>
     </task>
-    <task id="LOCAL-00010" summary="сделал страничку с рулеткой вместе с css, js, html">
+    <task id="LOCAL-00010" summary="deleted unnecessary fiels">
       <option name="closed" value="true" />
-      <created>1744970171701</created>
+      <created>1745215735370</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1744970171701</updated>
+      <updated>1745215735370</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added fos for roulette page">
+      <option name="closed" value="true" />
+      <created>1745215932708</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1745215932708</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added admin panel">
+      <option name="closed" value="true" />
+      <created>1745219102012</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1745219102012</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added inventory">
+      <option name="closed" value="true" />
+      <created>1745493467645</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1745493467645</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added inventory">
+      <option name="closed" value="true" />
+      <created>1745493477094</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1745493477094</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,11 +307,17 @@
     <MESSAGE value="add .gitignore" />
     <MESSAGE value="added design" />
     <MESSAGE value="added design_1" />
-    <MESSAGE value="сделал страничку с рулеткой вместе с css, js, html" />
-    <option name="LAST_COMMIT_MESSAGE" value="сделал страничку с рулеткой вместе с css, js, html" />
+    <MESSAGE value="added skins database" />
+    <MESSAGE value="deleted unnecessary fiels" />
+    <MESSAGE value="added fos for roulette page" />
+    <MESSAGE value="added admin panel" />
+    <MESSAGE value="added inventory" />
+    <option name="LAST_COMMIT_MESSAGE" value="added inventory" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WinSkin_site$server.coverage" NAME="server Coverage Results" MODIFIED="1742473761563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/WinSkin_site$app.coverage" NAME="app Coverage Results" MODIFIED="1743957439937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/WinSkin_site$app.coverage" NAME="app Coverage Results" MODIFIED="1745215823649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/app_py$run.coverage" NAME="run Coverage Results" MODIFIED="1745568459550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/app_py$app.coverage" NAME="app Coverage Results" MODIFIED="1745493491724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>

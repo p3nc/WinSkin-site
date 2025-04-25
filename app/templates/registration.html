@@ -25,6 +25,6 @@
     <input type="password" name="confirmPassword" placeholder="Підтвердіть пароль" required>
     <button type="submit">Зареєструватися</button>
   </form>
-  <p>Вже маєте акаунт? <a href="{{ url_for('login') }}">Вхід</a></p>
+  <p>Вже маєте акаунт? <a href="{{ url_for('auth.login') }}">Вхід</a></p>
 </div>
 {% endblock %}

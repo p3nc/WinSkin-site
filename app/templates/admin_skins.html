@@ -46,7 +46,7 @@
                 <span class="skin-name">{{ skin.name }}</span>
                 <span class="skin-collection">{{ skin.collection }}</span>
             </div>
-            <form method="POST" action="{{ url_for('delete_skin', skin_id=skin.id) }}" class="delete-form">
+            <form method="POST" action="{{ url_for('admin.delete_skin', skin_id=skin.id) }}" class="delete-form">
                 <button type="submit" class="delete-button">Delete</button>
             </form>
         </div>

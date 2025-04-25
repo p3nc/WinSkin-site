@@ -71,7 +71,7 @@ const caseCollections = {
 async function loadSkinsForCase(caseId) {
     try {
         const collection = caseCollections[caseId];
-        const response = await fetch(`/get_case_skins/${collection}`);
+        const response = await fetch(`/roulette/get_skins/${collection}`);
         const data = await response.json();
         return data.skins;
     } catch (error) {
@@ -100,8 +100,8 @@ function animateNumber(element, start, end, duration) {
 }
 
 spinButton.addEventListener('click', async () => {
-        try {
-        const response = await fetch('/spin_roulette', {
+    try {
+        const response = await fetch('/roulette/spin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -185,7 +185,7 @@ async function determineWinner(angle) {
     `;
 
     try {
-        await fetch('/save_won_skin', {
+        await fetch('/roulette/save', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

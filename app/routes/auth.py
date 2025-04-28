@@ -1,51 +1,60 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, session
 from app.models import User
 from app import db
+from app.email import send_registration_email
 
 auth_bp = Blueprint('auth', __name__, url_prefix='')
 
-@auth_bp.route('/login', methods=['GET', 'POST'])
-def login():
-    if 'user_id' in session:
-        return redirect(url_for('main.mainpage'))
-    if request.method == 'POST':
-        username = request.form.get('username')
-        password = request.form.get('password')
-
-        user = User.query.filter_by(username=username, password=password).first()
-        if user:
-            session['user_id'] = user.id
-            return redirect(url_for('main.mainpage'))
-        else:
-            flash('Неправильний логін або пароль', 'error')
-            return redirect(url_for('auth.login'))
-    return render_template('login.html')
 
 @auth_bp.route('/registration', methods=['GET', 'POST'])
 def registration():
     if 'user_id' in session:
         return redirect(url_for('main.mainpage'))
+
     if request.method == 'POST':
         username = request.form.get('username')
-        email = request.form.get('email')
         password = request.form.get('password')
-        confirm_password = request.form.get('confirmPassword')
+        email = request.form.get('email')
 
-        if password != confirm_password:
-            flash('Паролі не збігаються', 'error')
+        if User.query.filter_by(username=username).first():
+            flash('Username already exists', 'error')
             return redirect(url_for('auth.registration'))
 
-        if User.query.filter_by(username=username).first() or User.query.filter_by(email=email).first():
-            flash('Користувач із таким логіном або email вже існує', 'error')
+        if User.query.filter_by(email=email).first():
+            flash('Email already registered', 'error')
             return redirect(url_for('auth.registration'))
 
-        new_user = User(username=username, email=email, password=password)
-        db.session.add(new_user)
+        user = User(username=username, email=email)
+        user.set_password(password)
+
+        db.session.add(user)
         db.session.commit()
-        session['user_id'] = new_user.id
-        flash('Реєстрація пройшла успішно!', 'success')
-        return redirect(url_for('main.mainpage'))
+
+        send_registration_email(user)
+        flash('Registration successful! Please check your email.', 'success')
+        return redirect(url_for('auth.login'))
+
     return render_template('registration.html')
+
+
+@auth_bp.route('/login', methods=['GET', 'POST'])
+def login():
+    if 'user_id' in session:
+        return redirect(url_for('main.mainpage'))
+
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+
+        user = User.query.filter_by(username=username).first()
+
+        if user and user.check_password(password):
+            session['user_id'] = user.id
+            return redirect(url_for('main.mainpage'))
+
+        flash('Invalid username or password', 'error')
+
+    return render_template('login.html')
 
 @auth_bp.route('/logout')
 def logout():

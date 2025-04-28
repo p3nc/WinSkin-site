@@ -1,0 +1,221 @@
+[33mcommit 83e99366d92a3eb755f81ddbb459e3cf80f0f7fd[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Mon Apr 28 19:29:32 2025 +0300
+
+    Збереження змін перед rebase
+
+[33mcommit 7f96c4a877b1d771e6a969a7887f68cf4d8bcf23[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Mon Apr 28 19:19:49 2025 +0300
+
+    added password hashing
+
+[33mcommit 6b1aa7e5d6451ddb561ac331bab8262b54a1ebfc[m
+Author: SerlinkX <162686136+SerlinkX@users.noreply.github.com>
+Date:   Fri Apr 25 12:35:28 2025 +0300
+
+    added inventory
+
+[33mcommit be65220ae328a2959cb10657f83eacb4d8c71954[m
+Author: SerlinkX <162686136+SerlinkX@users.noreply.github.com>
+Date:   Fri Apr 25 12:33:08 2025 +0300
+
+    added inventory
+
+[33mcommit 64c9c8af4d189187503d935768ee7e7ff10ca8b8[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Fri Apr 25 12:00:32 2025 +0300
+
+    bug fix
+
+[33mcommit 907cd72b8d0ef1fb5cbb7f29c585f588715cb02b[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Fri Apr 25 11:24:24 2025 +0300
+
+    requirements.txt update
+
+[33mcommit 34cfb4a642b3b37850d0eca3aca158d126befd25[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Fri Apr 25 11:20:34 2025 +0300
+
+    added new structure
+
+[33mcommit 99c2c7716933920930ea3b94b656290635e2414e[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Thu Apr 24 14:17:52 2025 +0300
+
+    added inventory
+
+[33mcommit c3be1262e3d824ca15cf359a60be69a3a2e19e52[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Thu Apr 24 14:17:39 2025 +0300
+
+    added inventory
+
+[33mcommit 922aac0f97997cee2479e811520dfceb1ed20921[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Mon Apr 21 10:04:59 2025 +0300
+
+    added admin panel
+
+[33mcommit 70583ed370defe534f864bf933d90ae030326199[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Mon Apr 21 09:12:11 2025 +0300
+
+    added fos for roulette page
+
+[33mcommit 12dc88d52e6d3833f5011363194abd67a2487d9f[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Mon Apr 21 09:08:51 2025 +0300
+
+    deleted unnecessary fiels
+
+[33mcommit 1326d59749506eb3e726427e2580b10641f895e1[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Mon Apr 21 09:05:23 2025 +0300
+
+    added skins database
+
+[33mcommit 59cd82532abd7c0a08bf1c8ce572272f08afe0f4[m
+Author: 1IvanKoh1 <ivan.kohutenko@student.karazin.ua>
+Date:   Fri Apr 18 12:58:18 2025 +0300
+
+    прибрав зайві коментарі
+
+[33mcommit 4f8f3f5e03b43dcfe16f907687f662fb3214ac13[m
+Author: 1IvanKoh1 <ivan.kohutenko@student.karazin.ua>
+Date:   Fri Apr 18 12:56:08 2025 +0300
+
+    сделал страничку с рулеткой вместе с css, js, html
+
+[33mcommit 765266c07c0a2ed85f738b7df7c52a46054e1806[m
+Author: 1IvanKoh1 <ivan.kohutenko@student.karazin.ua>
+Date:   Fri Apr 18 12:55:22 2025 +0300
+
+    сделал страничку с рулеткой вместе с css, js, html
+
+[33mcommit 4f193d0f40b89a608ec922dba9fba00d398d5972[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Mon Apr 7 21:12:26 2025 +0300
+
+    Added root route redirect to mainpage and fixed database path
+
+[33mcommit 1f933a60fe72bfbf0e7f9f0eb1a4c790ce72a817[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Mon Apr 7 12:39:35 2025 +0300
+
+    Updated navbar and footer styles: added golden accents, semi-transparent backgrounds, shadows and hover effects
+
+[33mcommit 1afa2b4ab4cb9d3fdd6bf694d0804b278c82e174[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Sun Apr 6 19:36:53 2025 +0300
+
+    added design_1
+
+[33mcommit 5e1d1ca3d6ad3019a66f6f69ffe97af673ffd3d8[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Sun Apr 6 19:36:00 2025 +0300
+
+    added design
+
+[33mcommit 1d4c57060346ddfc617e5b0f38cf2d15196e9fe2[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Sun Apr 6 14:11:32 2025 +0300
+
+    add .gitignore
+
+[33mcommit fe106429ad5c21e5793c592a9dcc23f6fe566017[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Sun Apr 6 14:09:19 2025 +0300
+
+    Improved animations in user.html and added currency to the navbar
+
+[33mcommit 37cab9f58e832e8edb5ef013384a1285209bfc3d[m
+Author: SerlinkX <162686136+SerlinkX@users.noreply.github.com>
+Date:   Sun Apr 6 12:23:59 2025 +0300
+
+    Add files via upload
+
+[33mcommit 72e16faabd06042b443c76a51ac511af18219244[m
+Author: SerlinkX <162686136+SerlinkX@users.noreply.github.com>
+Date:   Sun Apr 6 12:20:08 2025 +0300
+
+    Add files via upload
+
+[33mcommit 7a0bba5c68cc0db19572d1988a55baaf92abeab3[m
+Author: SerlinkX <162686136+SerlinkX@users.noreply.github.com>
+Date:   Sun Apr 6 12:16:02 2025 +0300
+
+    Add files via upload
+
+[33mcommit bf02b8ff67a735f8e22b72c5e76285cd51cbdb0b[m
+Author: SerlinkX <162686136+SerlinkX@users.noreply.github.com>
+Date:   Sun Apr 6 12:14:43 2025 +0300
+
+    Add files via upload
+
+[33mcommit c1729a1f0bf3f4a2cfac1b35cdee1d544888d706[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Thu Mar 27 21:40:14 2025 +0200
+
+    Додано розширений дисклеймер українською мовою
+
+[33mcommit 801f5ec421a883b896507897409b9d3cf2926505[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Thu Mar 27 10:25:28 2025 +0200
+
+    added roulette page
+
+[33mcommit 1c8342a69933b0c8cf85188e5d8d0f897485003a[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Mon Mar 24 18:37:41 2025 +0200
+
+    added currency
+
+[33mcommit bfe450aa9f069bcc2a4d86ca3a1e2cbdfcd49ea9[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Mon Mar 24 17:54:19 2025 +0200
+
+    added header and footer
+
+[33mcommit e4e829c409aa02ddd019c8fe5e8e6713432d71c4[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Thu Mar 20 15:13:52 2025 +0200
+
+    added database
+
+[33mcommit 259c9a77cb653eb2ff46afb1cba78f1c8cbfdccd[m
+Author: p3nc <zlyvko.of@gmail.com>
+Date:   Thu Mar 20 13:57:42 2025 +0200
+
+    Add registration
+
+[33mcommit e097b11b365a4f3115b7bdfede17146bf311a9b8[m
+Author: SerlinkX <162686136+SerlinkX@users.noreply.github.com>
+Date:   Sun Mar 16 15:29:33 2025 +0200
+
+    Delete style.css
+
+[33mcommit 2c2342e33c13773d5e6e22bf6b26fe1c672aa123[m
+Author: SerlinkX <162686136+SerlinkX@users.noreply.github.com>
+Date:   Sun Mar 16 15:29:16 2025 +0200
+
+    Delete script.js
+
+[33mcommit 632d0094ec2c64fadde0442ea8b5434969ed07d2[m
+Author: SerlinkX <162686136+SerlinkX@users.noreply.github.com>
+Date:   Sun Mar 16 15:28:14 2025 +0200
+
+    Add files via upload
+
+[33mcommit f539ad0c65b623255a94ae8a6d222e8b023234a4[m
+Author: SerlinkX <162686136+SerlinkX@users.noreply.github.com>
+Date:   Sun Mar 16 15:26:43 2025 +0200
+
+    Add files via upload
+
+[33mcommit c60afd59179b42c0bb77bcc30f3ef1b34389a6f3[m
+Author: SerlinkX <162686136+SerlinkX@users.noreply.github.com>
+Date:   Sun Mar 16 15:25:54 2025 +0200
+
+    Add files via upload

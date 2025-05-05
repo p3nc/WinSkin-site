@@ -1,3 +1,4 @@
+import os
 from flask import Blueprint, render_template, request, redirect, url_for, flash, session, abort
 from app.models import Skin, User
 from app import db
@@ -19,6 +20,33 @@ def admin_required(f):
 @admin_bp.route('/skins', methods=['GET', 'POST'])
 @admin_required
 def admin_skins():
+    # Get available images from skins directory
+    skins_dir = os.path.join('app', 'static', 'images', 'skins')
+    available_images = []
+
+    # Create directory if it doesn't exist
+    if not os.path.exists(skins_dir):
+        os.makedirs(skins_dir)
+
+    # Get all case directories
+    case_dirs = [
+        'Case1_Revolution',
+        'Case2_Kilowatt',
+        'Case3_DangerZone'
+    ]
+
+    # Get all image files from case directories
+    for case_dir in case_dirs:
+        case_path = os.path.join('app', 'static', 'images', case_dir)
+        if os.path.exists(case_path):
+            for filename in os.listdir(case_path):
+                if filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+                    image_url = f'/static/images/{case_dir}/{filename}'
+                    available_images.append({
+                        'photo': image_url,
+                        'name': filename.split('.')[0]
+                    })
+
     if request.method == 'POST':
         try:
             new_skin = Skin(
@@ -37,7 +65,7 @@ def admin_skins():
         return redirect(url_for('admin.admin_skins'))
 
     skins = Skin.query.all()
-    return render_template('admin_skins.html', skins=skins)
+    return render_template('admin_skins.html', skins=skins, available_images=available_images)
 
 @admin_bp.route('/skins/delete/<int:skin_id>', methods=['POST'])
 @admin_required

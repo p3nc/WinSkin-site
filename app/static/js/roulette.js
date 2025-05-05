@@ -4,6 +4,7 @@ const spinButton = document.getElementById('spin-button');
 const resultMessage = document.getElementById('result-message');
 let currentCaseId = 'case1';
 const SPIN_COST = 100;
+let isSpinning = false;
 
 const segments = [
     { color: 'blue', text: '', probability: 50 },
@@ -58,14 +59,14 @@ function degToRad(deg) {
 
 const caseImages = {
     'case1': '/static/images/Case1_Revolution/Case1.png',
-    'case2': '/static/images/Case2_Rebellion/case-image.png',
-    'case3': '/static/images/Case3_Retaliation/case-image.png'
+    'case2': '/static/images/Case2_Kilowatt/Case2.png',
+    'case3': '/static/images/Case3_DangerZone/Case3.png'
 };
 
 const caseCollections = {
     'case1': 'Revolution',
-    'case2': 'Rebellion',
-    'case3': 'Retaliation'
+    'case2': 'Kilowatt',
+    'case3': 'DangerZone'
 };
 
 async function loadSkinsForCase(caseId) {
@@ -100,6 +101,14 @@ function animateNumber(element, start, end, duration) {
 }
 
 spinButton.addEventListener('click', async () => {
+    if (isSpinning) {
+        return;
+    }
+
+    isSpinning = true;
+    spinButton.disabled = true;
+    spinButton.style.opacity = '0.5';
+
     try {
         const response = await fetch('/roulette/spin', {
             method: 'POST',
@@ -146,6 +155,9 @@ spinButton.addEventListener('click', async () => {
             if (progress < 1) {
                 requestAnimationFrame(animate);
             } else {
+                isSpinning = false;
+                spinButton.disabled = false;
+                spinButton.style.opacity = '1';
                 determineWinner(currentAngle);
             }
         }
@@ -155,6 +167,9 @@ spinButton.addEventListener('click', async () => {
     } catch (error) {
         console.error('Error:', error);
         alert('Помилка при крутінні рулетки');
+        isSpinning = false;
+        spinButton.disabled = false;
+        spinButton.style.opacity = '1';
     }
 });
 
@@ -202,6 +217,10 @@ async function determineWinner(angle) {
 }
 
 async function showCaseSkins(caseId) {
+    if (isSpinning) {
+        return;
+    }
+
     currentCaseId = caseId;
     document.getElementById('case-image').src = caseImages[caseId];
 
@@ -232,7 +251,30 @@ async function showCaseSkins(caseId) {
     }
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
     showCaseSkins('case1');
     spinButton.textContent = `Spin (${SPIN_COST} ₮)`;
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const balanceElement = document.querySelector('.balance-amount');
+
+    async function updateBalance() {
+        try {
+            const response = await fetch('/api/get_balance');
+            const data = await response.json();
+            if (response.ok && balanceElement) {
+                balanceElement.textContent = `${data.balance} ₮`;
+            }
+        } catch (error) {
+            console.error('Error fetching balance:', error);
+        }
+    }
+
+    setInterval(updateBalance, 5000);
+
+
+    updateBalance();
+});
+

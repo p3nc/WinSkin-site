@@ -51,3 +51,5 @@ def get_skins(collection):
             'photo': s.photo
         } for s in skins]
     })
+
+
